@@ -4,7 +4,7 @@ import { UserService } from './user.service';
 import { mockUser } from './testClasses and mocks/mocks/users'
 
 
-fdescribe('UserService', () => {
+describe('UserService', () => {
 	// simular soicitudes http 
 	let httpfake: HttpTestingController;
 	let servicio: UserService;
