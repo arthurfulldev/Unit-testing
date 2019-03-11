@@ -6,6 +6,8 @@ export class AppPage {
   }
 
   getParagraphText() {
+    console.log(element);
+    
     return element(by.css('app-root h1')).getText();
   }
 }

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, Observer } from 'rxjs';
 import { User } from './testClasses and mocks/user';
 
 @Injectable({
@@ -13,5 +13,9 @@ export class UserService {
 
   gatAll():Observable<User[]> {
       return this.http.get<User[]>(`${this.uri}/users`)
+  }
+
+  getUser(id): Observable<User>{
+    return this.http.get<User>(`${this.uri}/users/${id}`);
   }
 }
